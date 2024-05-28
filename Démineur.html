@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="'fr">
+<head>
+<title>Démineur</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"  href="./Demineur.css" type="text/css" /> 
+
+</head>
+<body>
+    <div class="page">
+        <h1>
+            D&eacute;mineur
+        </h1>
+        <div class="box">
+            <div class="compteur_de_bombe" id="compteur_de_bombe"></div>
+            <div class="timer" id="timer"></div>
+        </div>
+        <div class="game" id="plateau">
+
+        </div>
+        <div class="options">
+
+            <div id="result" class="result">
+
+            </div>
+
+            <div class="menus">
+                <div class="menu" onclick="start('easy');">
+                    Jouer "Facile"
+                </div>
+                <div class="menu" onclick="start('normal');">
+                    Jouer "Normal"
+                </div>
+                <div class="menu" onclick="start('hard');">
+                    Jouer "Difficile"
+                </div>
+                <div class="menu" onclick="start('extreme');">
+                    Jouer "Extr&ecirc;me"
+                </div>
+                <div class="menu" onclick="window.location.reload()">
+                    Reset
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Démineur.js"></script>
+<script>
+    /* on load scripts */
+    window.onload = function() {
+        Demineur.initialise();
+    }
+
+    const start = (dif) => {
+        Demineur.startGame(dif)
+        Demineur.timer();
+    }
+</script>
+</body>
+</html>
